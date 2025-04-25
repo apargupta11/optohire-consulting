@@ -3,105 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Meta Tags -->
-  <title>Optohire Consulting | Smart, Scalable Hiring Solutions</title>
-  <meta name="description" content="Optohire Consulting connects high-quality professionals with companies seeking smart, scalable, and future-ready hiring solutions." />
-  
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EmploymentAgency",
-      "name": "Optohire Consulting",
-      "description": "Connecting exceptional talent with transformative career opportunities.",
-      "serviceType": "Staffing & Recruitment Solutions"
-    }
-  </script>
-
-  <!-- CSS -->
+  <title>Optohire Consulting | Connecting Talent with Opportunities</title>
   <link rel="stylesheet" href="css/style.css" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    .tagline span {
-      color: #2b6cb0;
-      font-weight: bold;
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+      color: #333;
     }
-    .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #2b6cb0;
+
+    header {
+      background: linear-gradient(120deg, #2b6cb0, #4e8cd9);
       color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      margin: 10px 5px;
-    }
-    .cta-button:hover {
-      background-color: #1e4e8c;
-    }
-    .highlight {
-      color: #2b6cb0;
-      font-weight: 600;
-    }
-    .hero {
-      padding: 40px 20px;
-      background: #f7f9fc;
+      padding: 20px 0;
       text-align: center;
     }
-    .testimonials blockquote {
-      margin: 20px auto;
+
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      background: url('banner.jpg') no-repeat center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
       max-width: 600px;
-      font-style: italic;
+      margin: 0 auto 30px;
+    }
+
+    .cta-button {
+      padding: 12px 24px;
+      background-color: #ffffff;
+      color: #2b6cb0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #2b6cb0;
+      color: #fff;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #2b6cb0;
+      color: white;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <div class="container">
-      <h1>Optohire Consulting</h1>
-      <p class="tagline">Empowering growth by matching <span>great people</span> with <span>great opportunities</span></p>
-      
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+    <h1>Optohire Consulting</h1>
+    <p>Connecting exceptional talent with transformative opportunities</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Your Strategic Hiring Partner</h2>
-      <p>We provide <span class="highlight">fast, reliable, and quality recruitment solutions</span> tailored to your business goals—whether you're scaling a startup or growing an enterprise team.</p>
-      
-      <div class="cta-container">
-        <a href="contact.html" class="cta-button">Hire Top Talent</a>
-        <a href="services.html" class="cta-button">Our Services</a>
+  <section class="hero">
+    <h2>Your Strategic Hiring Partner</h2>
+    <p>We provide smart, scalable recruitment solutions to help businesses grow with the right talent.</p>
+    <a href="contact.html" class="cta-button">Let’s Connect</a>
+  </section>
+
+  <section class="section">
+    <h3>Why Choose Optohire?</h3>
+    <div class="card-container">
+      <div class="card">
+        <h4>Fast Hiring</h4>
+        <p>Quick turnaround time with pre-vetted candidates ready to go.</p>
       </div>
-    </section>
+      <div class="card">
+        <h4>Quality Talent</h4>
+        <p>We deliver only top-tier, technically screened professionals.</p>
+      </div>
+      <div class="card">
+        <h4>Post-offer Engagement</h4>
+        <p>Our strong post-offer care ensures higher joining ratios.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="testimonials">
-      <h3>Success Stories</h3>
-      <blockquote>
-        <p>"Optohire helped us build a high-performance team with zero delays. Incredible experience!"</p>
-        <cite>— HR Manager, Tech Startup</cite>
-      </blockquote>
-      <blockquote>
-        <p>"They made hiring so smooth—even arranged direct connects with our hiring manager."</p>
-        <cite>— Director of Talent, FinTech Company</cite>
-      </blockquote>
-    </section>
-  </main>
+  <section class="section">
+    <h3>Client Testimonials</h3>
+    <div class="card-container">
+      <div class="card">
+        <p>"They found us the perfect-fit candidate in record time."</p>
+        <strong>— HR, Manufacturing Co.</strong>
+      </div>
+      <div class="card">
+        <p>"The team at Optohire made hiring effortless and personal."</p>
+        <strong>— Director, Tech Startup</strong>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p><strong>Optohire Consulting</strong> – Committed to quality, speed, and transparency in recruitment.</p>
-    <p>Pre-vetted candidates · Post-offer engagement · Executive & Tech hiring · Customized hiring reports</p>
+  <footer class="footer">
     <p>&copy; 2025 Optohire Consulting. All rights reserved.</p>
+    <p>Smart, Scalable, Future-Ready Hiring.</p>
   </footer>
 </body>
 </html>
