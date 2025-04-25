@@ -2,113 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Optohire Consulting | Connecting Talent with Opportunities</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Optohire Consulting connects high-quality professionals with companies seeking smart, scalable, and future-ready hiring solutions." />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EmploymentAgency",
+      "name": "Optohire Consulting",
+      "description": "Connecting exceptional talent with transformative career opportunities.",
+      "serviceType": "Staffing & Recruitment Solutions"
+    }
+  </script>
+
   <style>
-    body {
+    :root {
+      --main-blue: #2b6cb0;
+      --hover-blue: #1e4e8c;
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background-color: #f9fafc;
       color: #333;
+      scroll-behavior: smooth;
     }
 
     header {
-      background: linear-gradient(120deg, #2b6cb0, #4e8cd9);
+      background: linear-gradient(120deg, var(--main-blue), #4e8cd9);
       color: white;
       padding: 20px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .hero {
-      padding: 80px 20px;
-      background: url('banner.jpg') no-repeat center/cover;
-      color: white;
+      padding: 100px 20px;
       text-align: center;
+      background: radial-gradient(circle at center, #2b6cb0, #1e4e8c);
+      color: white;
+      animation: fadeIn 1.5s ease-out;
     }
 
     .hero h2 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      animation: fadeInUp 1s ease-out;
     }
 
     .hero p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto 30px;
     }
 
     .cta-button {
       padding: 12px 24px;
-      background-color: #ffffff;
-      color: #2b6cb0;
+      background-color: white;
+      color: var(--main-blue);
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.3s;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
     }
 
     .cta-button:hover {
-      background-color: #2b6cb0;
-      color: #fff;
+      background-color: var(--hover-blue);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    .cta-button:hover::after {
+      width: 200%;
+      height: 500%;
     }
 
     .section {
       padding: 60px 20px;
       text-align: center;
-    }
-
-    .section h3 {
-      font-size: 2rem;
-      margin-bottom: 30px;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
     }
 
     .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
+      margin-top: 30px;
     }
 
     .card {
       background: white;
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 30px;
       width: 280px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px) rotateZ(-0.5deg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    .footer {
-      text-align: center;
-      padding: 30px;
+    .card:hover::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+      animation: pulse 1s ease-out;
+    }
+
+    footer {
       background-color: #2b6cb0;
       color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pulse {
+      0% {transform: scale(0.9);}
+      100% {transform: scale(1);}
     }
   </style>
 </head>
@@ -127,7 +211,7 @@
 
   <section class="hero">
     <h2>Your Strategic Hiring Partner</h2>
-    <p>We provide smart, scalable recruitment solutions to help businesses grow with the right talent.</p>
+    <p>We specialize in fast, scalable, and high-quality recruitment solutions that align with your growth goals—whether you're building from the ground up or scaling rapidly.</p>
     <a href="contact.html" class="cta-button">Let’s Connect</a>
   </section>
 
@@ -135,37 +219,37 @@
     <h3>Why Choose Optohire?</h3>
     <div class="card-container">
       <div class="card">
-        <h4>Fast Hiring</h4>
-        <p>Quick turnaround time with pre-vetted candidates ready to go.</p>
-      </div>
-      <div class="card">
-        <h4>Quality Talent</h4>
-        <p>We deliver only top-tier, technically screened professionals.</p>
+        <h4>Fast Turnaround</h4>
+        <p>We deliver qualified, pre-vetted candidates with speed and precision.</p>
       </div>
       <div class="card">
         <h4>Post-offer Engagement</h4>
-        <p>Our strong post-offer care ensures higher joining ratios.</p>
+        <p>Our robust engagement model ensures higher joining ratios.</p>
+      </div>
+      <div class="card">
+        <h4>Tailored Hiring</h4>
+        <p>Custom recruitment strategies aligned with your business objectives.</p>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <h3>Client Testimonials</h3>
+    <h3>What Our Clients Say</h3>
     <div class="card-container">
       <div class="card">
-        <p>"They found us the perfect-fit candidate in record time."</p>
+        <p>"Optohire helped us build a high-performance team with zero delays!"</p>
         <strong>— HR, Manufacturing Co.</strong>
       </div>
       <div class="card">
-        <p>"The team at Optohire made hiring effortless and personal."</p>
-        <strong>— Director, Tech Startup</strong>
+        <p>"The candidate engagement model ensured everyone showed up on Day 1."</p>
+        <strong>— Director, FinTech Startup</strong>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
+  <footer>
     <p>&copy; 2025 Optohire Consulting. All rights reserved.</p>
-    <p>Smart, Scalable, Future-Ready Hiring.</p>
+    <p>Smart, scalable, and future-ready hiring.</p>
   </footer>
 </body>
 </html>
