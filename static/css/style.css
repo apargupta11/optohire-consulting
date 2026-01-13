@@ -245,3 +245,26 @@ footer {
   padding: 25px 0;
   margin-top: 60px;
 }
+/* =========================
+   Hero Section (Home Page)
+========================= */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: radial-gradient(circle at center, var(--main-blue), var(--hover-blue));
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
