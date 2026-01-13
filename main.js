@@ -1,3 +1,5 @@
+console.log("Global JS loaded");
+
 document.addEventListener("DOMContentLoaded", () => {
 
   // Contact form handling (only if form exists)
